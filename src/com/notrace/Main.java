@@ -1,6 +1,7 @@
 package com.notrace;
 
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
@@ -17,12 +18,35 @@ public class Main {
 //        permute(new int[]{1, 2, 3});
 //
 //        diStringMatch("III");
-        minDeletionSize(new String[]{"zyx", "wvu", "tsr"});
+//        minDeletionSize(new String[]{"zyx", "wvu", "tsr"});
 
+        arrayPairSum(new int[]{1, 4, 3, 2});
+    }
+
+    /**
+     * see <a href="https://leetcode-cn.com/problems/array-partition-i/submissions/">数组拆分1</>
+     * @param nums
+     * @return
+     */
+    public static int arrayPairSum(int[] nums) {
+
+        int min = 0;
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++) {
+            if (i % 2 == 0) {
+                min = min + nums[i];
+
+            }
+        }
+
+        System.out.println("min=" + min);
+
+        return min;
     }
 
     /**
      * see<a href="https://leetcode-cn.com/problems/delete-columns-to-make-sorted/">删列造序</>
+     *
      * @param A
      * @return
      */
@@ -42,7 +66,7 @@ public class Main {
 
 
         for (int i = 0; i < source[0].length; i++) {
-            for (int j = 0; j < source.length-1; j++) {
+            for (int j = 0; j < source.length - 1; j++) {
                 System.out.println("[j][i]:" + source[j][i] + " source[j+1][i]:" + source[j + 1][i]);
                 if (source[j][i].compareTo(source[j + 1][i]) > 0) {
 

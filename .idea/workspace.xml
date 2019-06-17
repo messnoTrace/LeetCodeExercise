@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b077c86-3f07-4ab1-9823-2160a5430933" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$Queen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$Queen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$SubSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$SubSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$UniquePath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$UniquePath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/notrace/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/notrace/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,9 +21,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/notrace/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state relative-caret-position="352">
+              <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#diStringMatch#0;class#Main#0" />
                 <element signature="method#subsets#0;class#Main#0" />
                 <element signature="method#removeOuterParentheses#0;class#Main#0" />
@@ -30,10 +36,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/util/Arrays.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+              <folding>
+                <element signature="e#5027#5028#0" expanded="true" />
+                <element signature="e#5098#5099#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/util/DualPivotQuicksort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-777">
+              <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="808">
-              <caret line="1144" column="6" lean-forward="true" selection-start-line="1144" selection-start-column="6" selection-end-line="1144" selection-end-column="6" />
+              <caret line="1144" column="6" selection-start-line="1144" selection-start-column="6" selection-end-line="1144" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -50,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="414" />
     <option name="y" value="151" />
     <option name="width" value="1850" />
@@ -92,7 +120,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560765469698" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560769818540" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -159,8 +187,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28038126" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.17712471" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28038126" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.25496426" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.34392375" />
@@ -186,33 +214,45 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>76</line>
+          <line>105</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>58</line>
+          <line>87</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>50</line>
+          <line>79</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>26</line>
+          <line>55</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>39</line>
+          <line>68</line>
           <properties />
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -233,15 +273,34 @@
     <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="808">
-          <caret line="1144" column="6" lean-forward="true" selection-start-line="1144" selection-start-column="6" selection-end-line="1144" selection-end-column="6" />
+          <caret line="1144" column="6" selection-start-line="1144" selection-start-column="6" selection-end-line="1144" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/util/DualPivotQuicksort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-777">
+          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+          <folding>
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/notrace/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="352">
+          <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#diStringMatch#0;class#Main#0" />
             <element signature="method#subsets#0;class#Main#0" />
             <element signature="method#removeOuterParentheses#0;class#Main#0" />
