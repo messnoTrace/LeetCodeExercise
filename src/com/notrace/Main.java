@@ -20,11 +20,39 @@ public class Main {
 //        diStringMatch("III");
 //        minDeletionSize(new String[]{"zyx", "wvu", "tsr"});
 
-        arrayPairSum(new int[]{1, 4, 3, 2});
+//        arrayPairSum(new int[]{1, 4, 3, 2});
+        reverseWords("Let's take LeetCode contest");
+    }
+
+
+    /**
+     * see <a href="https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/submissions/">反转字符串中的单词 III</a>
+     * @param s
+     * @return
+     */
+    public static String reverseWords(String s) {
+        StringBuilder sb;
+        String[] array = s.split(" ");
+        for (int i = 0; i < array.length; i++) {
+            sb = new StringBuilder(array[i]);
+            array[i] = sb.reverse().toString();
+        }
+        sb = new StringBuilder();
+
+        for (int i = 0; i < array.length; i++) {
+            sb.append(array[i]);
+            if (i != array.length - 1) {
+                sb.append(" ");
+            }
+        }
+        System.out.println(sb.toString());
+        return sb.toString();
+
     }
 
     /**
      * see <a href="https://leetcode-cn.com/problems/array-partition-i/submissions/">数组拆分1</>
+     *
      * @param nums
      * @return
      */

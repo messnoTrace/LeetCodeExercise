@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b077c86-3f07-4ab1-9823-2160a5430933" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$Queen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$Queen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$SubSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$SubSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$UniquePath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$UniquePath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/notrace/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/notrace/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/notrace/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
+            <state relative-caret-position="247">
+              <caret line="28" selection-start-line="28" selection-end-line="43" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#diStringMatch#0;class#Main#0" />
@@ -31,6 +26,15 @@
                 <element signature="method#uniqueMorseRepresentations#0;class#Main#0" />
                 <element signature="method#totalNQueens#0;class#Main#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/lang/StringBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -120,7 +124,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560769818540" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560770590827" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -187,8 +191,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28038126" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.25496426" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28038126" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.25496426" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.34392375" />
@@ -214,43 +218,43 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>105</line>
+          <line>128</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>87</line>
+          <line>110</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>79</line>
+          <line>102</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>55</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>68</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>43</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/notrace/Main.java</url>
-          <line>32</line>
+          <line>55</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
@@ -295,10 +299,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/lang/CharSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2859">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/lang/AbstractStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Java/jdk1.8.0_201/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/notrace/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
+        <state relative-caret-position="247">
+          <caret line="28" selection-start-line="28" selection-end-line="43" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#diStringMatch#0;class#Main#0" />
