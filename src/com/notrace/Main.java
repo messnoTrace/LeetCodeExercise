@@ -1,8 +1,6 @@
 package com.notrace;
 
 
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-
 import java.util.*;
 
 public class Main {
@@ -18,14 +16,48 @@ public class Main {
 
 //        permute(new int[]{1, 2, 3});
 //
-        diStringMatch("III");
+//        diStringMatch("III");
+        minDeletionSize(new String[]{"zyx", "wvu", "tsr"});
 
     }
 
     /**
-     *
-     * @param S
-     * see<a href="https://leetcode-cn.com/problems/di-string-match/submissions/">增减字符串</>
+     * see<a href="https://leetcode-cn.com/problems/delete-columns-to-make-sorted/">删列造序</>
+     * @param A
+     * @return
+     */
+
+    public static int minDeletionSize(String[] A) {
+
+        int count = 0;
+
+        if (A[0].length() == 1)
+            return 0;
+        String[][] source = new String[A.length][A[0].length()];
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[0].length(); j++) {
+                source[i][j] = String.valueOf(A[i].charAt(j));
+            }
+        }
+
+
+        for (int i = 0; i < source[0].length; i++) {
+            for (int j = 0; j < source.length-1; j++) {
+                System.out.println("[j][i]:" + source[j][i] + " source[j+1][i]:" + source[j + 1][i]);
+                if (source[j][i].compareTo(source[j + 1][i]) > 0) {
+
+                    count++;
+                    break;
+                }
+            }
+
+        }
+        System.out.println("count=" + count);
+        return count;
+    }
+
+    /**
+     * @param S see<a href="https://leetcode-cn.com/problems/di-string-match/submissions/">增减字符串</>
      * @return
      */
     public static int[] diStringMatch(String S) {
