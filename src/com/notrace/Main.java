@@ -1,7 +1,6 @@
 package com.notrace;
 
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
@@ -21,12 +20,92 @@ public class Main {
 //        minDeletionSize(new String[]{"zyx", "wvu", "tsr"});
 
 //        arrayPairSum(new int[]{1, 4, 3, 2});
-        reverseWords("Let's take LeetCode contest");
+//        reverseWords("Let's take LeetCode contest");
+        commonChars(new String[]{"cool", "lock", "cook"});
     }
 
 
     /**
+     * see <a href="https://leetcode-cn.com/problems/find-common-characters/">查找常用字符</a>
+     * @param A
+     * @return
+     */
+    public static List<String> commonChars(String[] A) {
+
+        List<String> list = new ArrayList<>();
+        /**
+         int minIndex = 0;
+         for (int i = 0; i < A.length; i++) {
+         minIndex = A[i].length() > A[minIndex].length() ? minIndex : i;
+         }
+
+         List<HashMap<String, Integer>> maplist = new ArrayList<>();
+
+         for (int i = 0; i < A.length; i++) {
+         HashMap<String, Integer> map = new HashMap<>();
+
+         for (int j = 0; j < A[i].length(); j++) {
+         if (map.containsKey(String.valueOf(A[i].charAt(j)))) {
+
+         int value = map.get(String.valueOf(A[i].charAt(j)));
+         value = value + 1;
+         map.put(String.valueOf(A[i].charAt(j)), value);
+         } else {
+         map.put(String.valueOf(A[i].charAt(j)), 1);
+         }
+         }
+         maplist.add(map);
+         }
+
+
+         HashMap<String, Integer> min = maplist.get(minIndex);
+
+         for (Map.Entry<String, Integer> entry : min.entrySet()) {
+         String key = entry.getKey();
+
+         boolean constants = true;
+         for (int i = 0; i < maplist.size(); i++) {
+         constants = constants && maplist.get(i).containsKey(key);
+         }
+         if (constants) {
+         int minValue = entry.getValue();
+         for (int i = 0; i < maplist.size(); i++) {
+         minValue = Math.min(minValue, maplist.get(i).get(key));
+         }
+
+         for (int i = 0; i < minValue; i++) {
+         list.add(key);
+         }
+         }
+         }
+         **/
+        int[] res = new int[26];
+        for (char c : A[0].toCharArray()) {
+            res[c - 'a']++;
+        }
+        for (int i = 1; i < A.length; i++) {
+            int[] temp = new int[26];
+            for (char c : A[i].toCharArray()) {
+                temp[c - 'a']++;
+            }
+            for (int j = 0; j < 26; j++) {
+                res[j] = Math.min(res[j], temp[j]);
+            }
+        }
+        for (int i = 0; i < res.length; i++) {
+            if (res[i] > 0) {
+                for (int j = 0; j < res[i]; j++) {
+                    list.add(((char) ('a' + i) + ""));
+                }
+            }
+        }
+
+        return list;
+    }
+
+    /**
      * see <a href="https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/submissions/">反转字符串中的单词 III</a>
+     *
      * @param s
      * @return
      */
