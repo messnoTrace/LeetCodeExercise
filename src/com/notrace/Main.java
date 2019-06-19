@@ -21,7 +21,27 @@ public class Main {
 
 //        arrayPairSum(new int[]{1, 4, 3, 2});
 //        reverseWords("Let's take LeetCode contest");
-        commonChars(new String[]{"cool", "lock", "cook"});
+//        commonChars(new String[]{"cool", "lock", "cook"});
+        titleToNumber("AAA");
+    }
+
+    /**
+     * see <a href="https://leetcode-cn.com/problems/excel-sheet-column-number/">Excel表序列号</a>
+     * @param s
+     * @return
+     */
+
+    public static int titleToNumber(String s){
+        int sum = 0;
+        int len = s.length();
+        for(int i = 0; i < len; i++){
+            int temp = s.charAt(i) - 'A' + 1;
+            sum = sum * 26 + temp;
+
+//            int temp = s.charAt(len-i-1) - 'A' + 1;
+//            sum += temp * Math.pow(26, i);
+        }
+        return sum;
     }
 
 
