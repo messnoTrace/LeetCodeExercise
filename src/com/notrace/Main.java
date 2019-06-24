@@ -25,15 +25,33 @@ public class Main {
 //        titleToNumber("AAA");
 
 //        findOcurrences("we will we will rock you", "we", "will");
-        countPrimeSetBits(6, 10);
+//        countPrimeSetBits(6, 10);
+        singleNumber(new int[]{1,2,3,2,3});
     }
 
+    /**
+     * @see <a href="https://leetcode-cn.com/problems/single-number">只出现一次的数字</a>
+     *  异或
+     * @param nums
+     * @return
+     */
+    public static int singleNumber(int[] nums) {
+
+        int res = 0;
+
+        for (int num : nums) {
+            res = res ^ num;
+        }
+
+        return res;
+
+    }
 
     /**
-     * @see<a href="https://leetcode-cn.com/problems/prime-number-of-set-bits-in-binary-representation/">二进制表示中质数个计算置位</a>
      * @param L
      * @param R
      * @return
+     * @see<a href="https://leetcode-cn.com/problems/prime-number-of-set-bits-in-binary-representation/">二进制表示中质数个计算置位</a>
      */
     public static int countPrimeSetBits(int L, int R) {
         int result = 0;
