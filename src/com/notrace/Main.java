@@ -27,13 +27,42 @@ public class Main {
         findOcurrences("we will we will rock you", "we", "will");
     }
 
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/occurrences-after-bigram/">Bigram 分词</a>
+     * @see <a href="https://leetcode-cn.com/problems/reverse-linked-list/">反转链表</a>
+     * @param head
+     * @return
+     */
+    public ListNode reverseList(ListNode head) {
+        ListNode prevNode = null;
+        ListNode currentNode = head;
+        while (currentNode != null) {
+            ListNode nextTmp = currentNode.next;
+            currentNode.next = prevNode;
+
+            prevNode = currentNode;
+            currentNode = nextTmp;
+        }
+
+        return prevNode;
+
+    }
+
+
+    /**
      * @param text
      * @param first
      * @param second
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/occurrences-after-bigram/">Bigram 分词</a>
      */
     public static String[] findOcurrences(String text, String first, String second) {
 
@@ -52,7 +81,7 @@ public class Main {
             }
         }
 
-        String[]arr= list.toArray(new String[list.size()]);
+        String[] arr = list.toArray(new String[list.size()]);
 
         return arr;
     }
