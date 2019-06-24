@@ -24,7 +24,46 @@ public class Main {
 //        commonChars(new String[]{"cool", "lock", "cook"});
 //        titleToNumber("AAA");
 
-        findOcurrences("we will we will rock you", "we", "will");
+//        findOcurrences("we will we will rock you", "we", "will");
+        countPrimeSetBits(6, 10);
+    }
+
+
+    /**
+     * @see<a href="https://leetcode-cn.com/problems/prime-number-of-set-bits-in-binary-representation/">二进制表示中质数个计算置位</a>
+     * @param L
+     * @param R
+     * @return
+     */
+    public static int countPrimeSetBits(int L, int R) {
+        int result = 0;
+        for (int i = L; i <= R; i++) {
+            String binaryString = Integer.toBinaryString(i);
+
+            int count = 0;
+            for (int d = 0; d < binaryString.length(); d++) {
+                if (binaryString.charAt(d) == '1') {
+                    count++;
+                }
+            }
+
+            if (isPrimeNumber(count)) {
+                result += 1;
+            }
+        }
+        return result;
+    }
+
+    public static boolean isPrimeNumber(int num) {
+        if (num == 2) return true;
+        if (num < 2 || num % 2 == 0) return false;
+        for (int i = 3; i <= Math.sqrt(num); i += 2) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+
     }
 
     public class ListNode {
@@ -37,9 +76,9 @@ public class Main {
     }
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/reverse-linked-list/">反转链表</a>
      * @param head
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/reverse-linked-list/">反转链表</a>
      */
     public ListNode reverseList(ListNode head) {
         ListNode prevNode = null;
