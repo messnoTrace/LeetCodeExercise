@@ -22,19 +22,52 @@ public class Main {
 //        arrayPairSum(new int[]{1, 4, 3, 2});
 //        reverseWords("Let's take LeetCode contest");
 //        commonChars(new String[]{"cool", "lock", "cook"});
-        titleToNumber("AAA");
+//        titleToNumber("AAA");
+
+        findOcurrences("we will we will rock you", "we", "will");
+    }
+
+
+    /**
+     * @see <a href="https://leetcode-cn.com/problems/occurrences-after-bigram/">Bigram 分词</a>
+     * @param text
+     * @param first
+     * @param second
+     * @return
+     */
+    public static String[] findOcurrences(String text, String first, String second) {
+
+        List<String> list = new ArrayList<>();
+        String[] spliteArr = text.split(" ");
+
+        for (int i = 0; i < spliteArr.length; i++) {
+
+            if (i != spliteArr.length - 1) {
+                if (spliteArr[i].equals(first) && spliteArr[i + 1].equals(second)) {
+                    if (i + 2 < spliteArr.length) {
+                        list.add(spliteArr[i + 2]);
+                    }
+                }
+
+            }
+        }
+
+        String[]arr= list.toArray(new String[list.size()]);
+
+        return arr;
     }
 
     /**
      * see <a href="https://leetcode-cn.com/problems/excel-sheet-column-number/">Excel表序列号</a>
+     *
      * @param s
      * @return
      */
 
-    public static int titleToNumber(String s){
+    public static int titleToNumber(String s) {
         int sum = 0;
         int len = s.length();
-        for(int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++) {
             int temp = s.charAt(i) - 'A' + 1;
             sum = sum * 26 + temp;
 
@@ -47,6 +80,7 @@ public class Main {
 
     /**
      * see <a href="https://leetcode-cn.com/problems/find-common-characters/">查找常用字符</a>
+     *
      * @param A
      * @return
      */
