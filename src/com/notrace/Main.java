@@ -26,14 +26,53 @@ public class Main {
 
 //        findOcurrences("we will we will rock you", "we", "will");
 //        countPrimeSetBits(6, 10);
-        singleNumber(new int[]{1,2,3,2,3});
+//        singleNumber(new int[]{1, 2, 3, 2, 3});
+        //[7,5,4,7,10,7,9,4,8,9,6,5,4,2,3,10,9,9,3,7,5,2,9,4,8,9]
+        //"zlrovckbgjqofmdzqetflraziyvkvcxzahzuuveypqxmjbwrjvmpdxjuhqyktuwjvmbeswxuznumazgxvitdrzxmqzhaaudztgie"
+        numberOfLines(new int[]{4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10}, "bbbcccdddaaa");
+    }
+
+
+    /**
+     * @see <a href="https://leetcode-cn.com/problems/number-of-lines-to-write-string/">写字符串需要的行数</a>
+     * @param widths
+     * @param S
+     * @return
+     */
+    public static int[] numberOfLines(int[] widths, String S) {
+        int[] result = new int[2];
+        result[0] = 1;
+        int count = 0;
+        for (int i = 0; i < S.length(); i++) {
+            char item = S.charAt(i);
+            int index = item - 'a';
+            int width = widths[index];
+
+            if (count + width < 100) {
+                count = count + width;
+                result[1] = count;
+            } else if (width + count == 100) {
+                result[0] += 1;
+                result[1] = 0;
+
+                count=0;
+            } else {
+                result[0] += 1;
+                result[1] = width;
+                count = width;
+            }
+
+        }
+
+        return result;
+
     }
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/single-number">只出现一次的数字</a>
-     *  异或
      * @param nums
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/single-number">只出现一次的数字</a>
+     * 异或
      */
     public static int singleNumber(int[] nums) {
 
