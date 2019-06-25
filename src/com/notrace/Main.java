@@ -30,14 +30,66 @@ public class Main {
         //[7,5,4,7,10,7,9,4,8,9,6,5,4,2,3,10,9,9,3,7,5,2,9,4,8,9]
         //"zlrovckbgjqofmdzqetflraziyvkvcxzahzuuveypqxmjbwrjvmpdxjuhqyktuwjvmbeswxuznumazgxvitdrzxmqzhaaudztgie"
 //        numberOfLines(new int[]{4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10}, "bbbcccdddaaa");
-        distributeCandies(new int[]{1,1,2,2,3,3});
+//        distributeCandies(new int[]{1, 1, 2, 2, 3, 3});
+
+        islandPerimeter(new int[][]{{0, 1, 1, 0},
+                {1, 1, 1, 0},
+                {0, 1, 0, 0},
+                {1, 1, 0, 0}});
     }
 
+    /**
+     * @see<a href="https://leetcode-cn.com/problems/island-perimeter/">岛屿的周长</a>
+     * @param grid
+     * @return
+     */
+
+    public static int islandPerimeter(int[][] grid) {
+        int count = 0;
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == 1) {
+                    count += 4;
+
+                    //左
+                    if (j - 1 >= 0) {
+                        if (grid[i][j - 1] == 1) {
+                            count -= 1;
+                        }
+                    }
+                    //上
+                    if (i - 1 >= 0) {
+                        if (grid[i - 1][j] == 1) {
+                            count -= 1;
+                        }
+                    }
+                    //右
+
+                    if (j + 1 <= grid[0].length - 1) {
+
+                        if (grid[i][j + 1] == 1) {
+                            count -= 1;
+                        }
+                    }
+                    //xia
+                    if (i + 1 <= grid.length - 1) {
+                        if (grid[i + 1][j] == 1) {
+                            count -= 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        return count;
+
+    }
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/distribute-candies/">分糖果</a>
      * @param candies
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/distribute-candies/">分糖果</a>
      */
     public static int distributeCandies(int[] candies) {
 
