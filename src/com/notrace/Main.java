@@ -32,16 +32,56 @@ public class Main {
 //        numberOfLines(new int[]{4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10}, "bbbcccdddaaa");
 //        distributeCandies(new int[]{1, 1, 2, 2, 3, 3});
 
-        islandPerimeter(new int[][]{{0, 1, 1, 0},
-                {1, 1, 1, 0},
-                {0, 1, 0, 0},
-                {1, 1, 0, 0}});
+//        islandPerimeter(new int[][]{{0, 1, 1, 0},
+//                {1, 1, 1, 0},
+//                {0, 1, 0, 0},
+//                {1, 1, 0, 0}});
+
+        projectionArea(new int[][]{{2,2,2},{2,1,2},{2,2,2}});
+    }
+
+
+    /**
+     * @see <a href="https://leetcode-cn.com/problems/projection-area-of-3d-shapes/">三维形体投影面积</a>
+     * @param grid
+     * @return
+     */
+    public static int projectionArea(int[][] grid) {
+
+        int countx = 0, county = 0, countz = 0;
+        for (int i = 0; i < grid.length; i++) {
+
+            int rowMax = 0, columnMax = 0;
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] != 0) {
+                    countz += 1;
+                }
+                rowMax = Math.max(rowMax, grid[i][j]);
+                columnMax = Math.max(columnMax, grid[j][i]);
+
+            }
+
+            county+=columnMax;
+            countx += rowMax;
+
+        }
+
+        for (int i = 0; i < grid.length; i++) {
+
+            for (int j = 0; j < grid[0].length; j++) {
+
+            }
+        }
+
+
+        return countx + county + countz;
+
     }
 
     /**
-     * @see<a href="https://leetcode-cn.com/problems/island-perimeter/">岛屿的周长</a>
      * @param grid
      * @return
+     * @see<a href="https://leetcode-cn.com/problems/island-perimeter/">岛屿的周长</a>
      */
 
     public static int islandPerimeter(int[][] grid) {
