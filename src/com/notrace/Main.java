@@ -29,15 +29,32 @@ public class Main {
 //        singleNumber(new int[]{1, 2, 3, 2, 3});
         //[7,5,4,7,10,7,9,4,8,9,6,5,4,2,3,10,9,9,3,7,5,2,9,4,8,9]
         //"zlrovckbgjqofmdzqetflraziyvkvcxzahzuuveypqxmjbwrjvmpdxjuhqyktuwjvmbeswxuznumazgxvitdrzxmqzhaaudztgie"
-        numberOfLines(new int[]{4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10}, "bbbcccdddaaa");
+//        numberOfLines(new int[]{4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10}, "bbbcccdddaaa");
+        distributeCandies(new int[]{1,1,2,2,3,3});
     }
 
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/number-of-lines-to-write-string/">写字符串需要的行数</a>
+     * @see <a href="https://leetcode-cn.com/problems/distribute-candies/">分糖果</a>
+     * @param candies
+     * @return
+     */
+    public static int distributeCandies(int[] candies) {
+
+
+        Set<Integer> set = new HashSet<>();
+
+        for (int item : candies) {
+            set.add(item);
+        }
+        return Math.min(set.size(), candies.length / 2);
+    }
+
+    /**
      * @param widths
      * @param S
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/number-of-lines-to-write-string/">写字符串需要的行数</a>
      */
     public static int[] numberOfLines(int[] widths, String S) {
         int[] result = new int[2];
@@ -55,7 +72,7 @@ public class Main {
                 result[0] += 1;
                 result[1] = 0;
 
-                count=0;
+                count = 0;
             } else {
                 result[0] += 1;
                 result[1] = width;
