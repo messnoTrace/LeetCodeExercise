@@ -42,12 +42,39 @@ public class Main {
         matrixReshape(new int[][]{{1, 2}, {3, 4}}, 1, 4);
     }
 
+
     /**
-     * @see <a href="https://leetcode-cn.com/problems/reshape-the-matrix/">重塑矩阵</a>
+     * @see <a href="https://leetcode-cn.com/problems/fizz-buzz/">Fizz Buzz</a>
+     * @param n
+     * @return
+     */
+    public static List<String> fizzBuzz(int n) {
+        List<String> list = new ArrayList<>();
+
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                list.add("FizzBuzz");
+            } else if (i % 3 == 0) {
+
+                list.add("Fizz");
+            } else if (i % 5 == 0) {
+
+                list.add("Buzz");
+            } else {
+                list.add(i + "");
+            }
+        }
+
+        return list;
+    }
+
+    /**
      * @param nums
      * @param r
      * @param c
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/reshape-the-matrix/">重塑矩阵</a>
      */
     public static int[][] matrixReshape(int[][] nums, int r, int c) {
 
