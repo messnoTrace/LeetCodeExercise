@@ -39,14 +39,40 @@ public class Main {
 
 //        projectionArea(new int[][]{{2, 2, 2}, {2, 1, 2}, {2, 2, 2}});
 
-        matrixReshape(new int[][]{{1, 2}, {3, 4}}, 1, 4);
+//        matrixReshape(new int[][]{{1, 2}, {3, 4}}, 1, 4);
+
+        nextGreaterElement(new int[]{2,4},new int[]{1,2,3,4});
     }
 
 
     /**
-     * @see<a href="https://leetcode-cn.com/problems/majority-element/comments/">求众数(摩尔投票算法)</a>
+     * @see<a href="https://leetcode-cn.com/problems/next-greater-element-i/">下一个更大元素1</>
+     * @param nums1
+     * @param nums2
+     * @return
+     */
+    public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        Stack<Integer> stack = new Stack<Integer>();
+        HashMap<Integer, Integer> hasMap = new HashMap<Integer, Integer>();
+
+        int[] result = new int[nums1.length];
+
+        for (int num : nums2) {
+            while (!stack.isEmpty() && stack.peek() < num) {
+                hasMap.put(stack.pop(), num);
+            }
+            stack.push(num);
+        }
+
+        for (int i = 0; i < nums1.length; i++) result[i] = hasMap.getOrDefault(nums1[i], -1);
+
+        return result;
+    }
+
+    /**
      * @param nums
      * @return
+     * @see<a href="https://leetcode-cn.com/problems/majority-element/comments/">求众数(摩尔投票算法)</a>
      */
     public static int majorityElement(int[] nums) {
 
