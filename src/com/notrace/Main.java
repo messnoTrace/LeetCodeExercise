@@ -37,14 +37,50 @@ public class Main {
 //                {0, 1, 0, 0},
 //                {1, 1, 0, 0}});
 
-        projectionArea(new int[][]{{2,2,2},{2,1,2},{2,2,2}});
+//        projectionArea(new int[][]{{2, 2, 2}, {2, 1, 2}, {2, 2, 2}});
+
+        matrixReshape(new int[][]{{1, 2}, {3, 4}}, 1, 4);
+    }
+
+    /**
+     * @see <a href="https://leetcode-cn.com/problems/reshape-the-matrix/">重塑矩阵</a>
+     * @param nums
+     * @param r
+     * @param c
+     * @return
+     */
+    public static int[][] matrixReshape(int[][] nums, int r, int c) {
+
+        if (r * c > nums.length * nums[0].length) {
+            return nums;
+        }
+
+
+        Queue<Integer> queue = new ArrayDeque<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[0].length; j++) {
+                queue.add(nums[i][j]);
+            }
+        }
+
+
+        int[][] result = new int[r][c];
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                result[i][j] = ((ArrayDeque<Integer>) queue).pop();
+            }
+        }
+
+
+        return result;
     }
 
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/projection-area-of-3d-shapes/">三维形体投影面积</a>
      * @param grid
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/projection-area-of-3d-shapes/">三维形体投影面积</a>
      */
     public static int projectionArea(int[][] grid) {
 
@@ -61,7 +97,7 @@ public class Main {
 
             }
 
-            county+=columnMax;
+            county += columnMax;
             countx += rowMax;
 
         }
