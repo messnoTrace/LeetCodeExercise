@@ -44,9 +44,31 @@ public class Main {
 
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/fizz-buzz/">Fizz Buzz</a>
+     * @see<a href="https://leetcode-cn.com/problems/majority-element/comments/">求众数(摩尔投票算法)</a>
+     * @param nums
+     * @return
+     */
+    public static int majorityElement(int[] nums) {
+
+        int rect = nums[0];
+        int count = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (rect == nums[i]) {
+                count++;
+            } else {
+                count--;
+                if (count == 0) {
+                    rect = nums[i + 1];
+                }
+            }
+        }
+        return rect;
+    }
+
+    /**
      * @param n
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/fizz-buzz/">Fizz Buzz</a>
      */
     public static List<String> fizzBuzz(int n) {
         List<String> list = new ArrayList<>();
