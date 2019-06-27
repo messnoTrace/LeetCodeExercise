@@ -41,15 +41,25 @@ public class Main {
 
 //        matrixReshape(new int[][]{{1, 2}, {3, 4}}, 1, 4);
 
-        nextGreaterElement(new int[]{2,4},new int[]{1,2,3,4});
+        nextGreaterElement(new int[]{2, 4}, new int[]{1, 2, 3, 4});
     }
 
 
     /**
-     * @see<a href="https://leetcode-cn.com/problems/next-greater-element-i/">下一个更大元素1</>
+     * @see <a href="https://leetcode-cn.com/problems/binary-number-with-alternating-bits/">交替位二进制数</a>
+     * @param n
+     * @return
+     */
+    public static boolean hasAlternatingBits(int n) {
+        int temp = n ^ (n >> 1);
+        return (temp & (temp + 1)) == 0;
+    }
+
+    /**
      * @param nums1
      * @param nums2
      * @return
+     * @see<a href="https://leetcode-cn.com/problems/next-greater-element-i/">下一个更大元素1</>
      */
     public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Stack<Integer> stack = new Stack<Integer>();
