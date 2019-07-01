@@ -44,12 +44,36 @@ public class Main {
         nextGreaterElement(new int[]{2, 4}, new int[]{1, 2, 3, 4});
     }
 
+    /**
+     * @see<a href="https://leetcode-cn.com/problems/invert-binary-tree/">反转二叉树</a>
+     * @param root
+     * @return
+     */
+    public TreeNode invertTree(TreeNode root) {
+
+        if (root == null)
+            return null;
+
+        TreeNode left = invertTree(root.right);
+        TreeNode right = invertTree(root.left);
+
+        TreeNode tmp = left;
+        left = right;
+        right = tmp;
+
+        root.left = left;
+        root.right = right;
+
+
+        return root;
+    }
+
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/merge-two-binary-trees/">合并二叉树</a>
      * @param t1
      * @param t2
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/merge-two-binary-trees/">合并二叉树</a>
      */
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
 
