@@ -46,13 +46,37 @@ public class Main {
 
 
     /**
-     * @see<a href="https://leetcode-cn.com/problems/delete-node-in-a-linked-list/">删除链表中的节点</a>
+     * @see <a href="https://leetcode-cn.com/problems/merge-two-binary-trees/">合并二叉树</a>
+     * @param t1
+     * @param t2
+     * @return
+     */
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+
+        TreeNode currentNode = null;
+
+        if (t1 == null) {
+            return t2;
+        }
+        if (t2 == null) {
+            return t1;
+        }
+        currentNode = new TreeNode(t1.val + t2.val);
+        currentNode.left = mergeTrees(t1.left, t2.left);
+        currentNode.right = mergeTrees(t1.right, t2.right);
+
+
+        return currentNode;
+    }
+
+    /**
      * @param node
+     * @see<a href="https://leetcode-cn.com/problems/delete-node-in-a-linked-list/">删除链表中的节点</a>
      */
     public void deleteNode(ListNode node) {
 
-        node.val=node.next.val;
-        node.next=node.next.next;
+        node.val = node.next.val;
+        node.next = node.next.next;
 
     }
 
