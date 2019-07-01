@@ -45,6 +45,17 @@ public class Main {
     }
 
 
+    /**
+     * @see<a href="https://leetcode-cn.com/problems/delete-node-in-a-linked-list/">删除链表中的节点</a>
+     * @param node
+     */
+    public void deleteNode(ListNode node) {
+
+        node.val=node.next.val;
+        node.next=node.next.next;
+
+    }
+
     public class TreeNode {
         int val;
         TreeNode left;
@@ -56,11 +67,11 @@ public class Main {
     }
 
     /**
-     * @see <a href="https://leetcode-cn.com/problems/range-sum-of-bst/">二叉搜索树的范围和</a>
      * @param root
      * @param L
      * @param R
      * @return
+     * @see <a href="https://leetcode-cn.com/problems/range-sum-of-bst/">二叉搜索树的范围和</a>
      */
     public static int rangeSumBST(TreeNode root, int L, int R) {
 
@@ -74,7 +85,7 @@ public class Main {
             return rangeSumBST(root.left, L, R);
         }
 
-        return root.val + rangeSumBST(root.left, L, R) + rangeSumBST(root.right , L, R);
+        return root.val + rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R);
 
 
     }
