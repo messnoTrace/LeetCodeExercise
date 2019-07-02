@@ -69,20 +69,15 @@ public class Main {
      */
     public TreeNode invertTree(TreeNode root) {
 
-        if (root == null)
-            return null;
-
-        TreeNode left = invertTree(root.right);
-        TreeNode right = invertTree(root.left);
-
-        TreeNode tmp = left;
-        left = right;
-        right = tmp;
-
-        root.left = left;
-        root.right = right;
-
-
+        //递归结束条件
+        if(root == null || (root.right == null && root.left == null) )
+            return root;
+        //临时变量记录左右节点地址
+        TreeNode left = root.left;
+        TreeNode right = root.right;
+        //交换左右节点
+        root.right = invertTree(left);
+        root.left = invertTree(right);
         return root;
     }
 
