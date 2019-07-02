@@ -44,10 +44,28 @@ public class Main {
         nextGreaterElement(new int[]{2, 4}, new int[]{1, 2, 3, 4});
     }
 
+
     /**
-     * @see<a href="https://leetcode-cn.com/problems/invert-binary-tree/">反转二叉树</a>
+     * @see<a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/">二叉树的最大深度</a>
      * @param root
      * @return
+     */
+    public int maxDepth(TreeNode root) {
+
+        if (root == null) {
+            return 0;
+        }
+
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        return Math.max(left, right) + 1;
+
+    }
+
+    /**
+     * @param root
+     * @return
+     * @see<a href="https://leetcode-cn.com/problems/invert-binary-tree/">反转二叉树</a>
      */
     public TreeNode invertTree(TreeNode root) {
 
