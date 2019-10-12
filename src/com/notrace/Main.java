@@ -41,14 +41,39 @@ public class Main {
 
 //        matrixReshape(new int[][]{{1, 2}, {3, 4}}, 1, 4);
 
-        nextGreaterElement(new int[]{2, 4}, new int[]{1, 2, 3, 4});
+//        nextGreaterElement(new int[]{2, 4}, new int[]{1, 2, 3, 4});
+
+        System.out.println("---" + uniqueOccurrences(new int[]{-3, 0, 1, -3, 1, 1, 1, -3, 10, 0}));
     }
 
 
     /**
-     * @see<a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/">二叉树的最大深度</a>
+     * @param arr
+     * @return
+     * @see <a href="https://leetcode-cn.com/problems/unique-number-of-occurrences/">独一无二的出现次数</a>
+     */
+    public static boolean uniqueOccurrences(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return true;
+        }
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for (Integer value : arr) {
+            Integer temp = map.get(value);
+            map.put(temp, temp == null ? 1 : temp + 1);
+        }
+
+        Set<Integer> set = new HashSet<Integer>(map.values());
+        if (map.size() == set.size()) {
+            return true;
+        } else return false;
+
+    }
+
+    /**
      * @param root
      * @return
+     * @see<a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/">二叉树的最大深度</a>
      */
     public int maxDepth(TreeNode root) {
 
@@ -70,7 +95,7 @@ public class Main {
     public TreeNode invertTree(TreeNode root) {
 
         //递归结束条件
-        if(root == null || (root.right == null && root.left == null) )
+        if (root == null || (root.right == null && root.left == null))
             return root;
         //临时变量记录左右节点地址
         TreeNode left = root.left;
