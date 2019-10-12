@@ -43,9 +43,56 @@ public class Main {
 
 //        nextGreaterElement(new int[]{2, 4}, new int[]{1, 2, 3, 4});
 
-        System.out.println("---" + uniqueOccurrences(new int[]{-3, 0, 1, -3, 1, 1, 1, -3, 10, 0}));
+//        System.out.println("---" + uniqueOccurrences(new int[]{-3, 0, 1, -3, 1, 1, 1, -3, 10, 0}));
+        System.out.println("===" + letterCasePermutation("a1b2").toString());
     }
 
+    /**
+     * @see<a href="https://leetcode-cn.com/problems/letter-case-permutation/">大小写字母全排列</a>
+     * @param S
+     * @return
+     */
+    public static List<String> letterCasePermutation(String S) {
+        List<String> listResult = new ArrayList<>();
+
+        Character[] source = new Character[S.length()];
+        for (int i = 0; i < S.length(); i++) {
+            source[i] = S.charAt(i);
+        }
+        dfs(0, source, listResult);
+        return listResult;
+
+    }
+
+
+    public static void dfs(int index, Character[] s, List<String> resultList) {
+        //边界条件
+        int length = s.length;
+        if (index == length - 1) {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < length; i++) {
+                sb.append(s[i]);
+            }
+            resultList.add(sb.toString());
+            return;
+        }
+
+        dfs(index + 1, s, resultList);
+
+        if (isChar(s[index])) {
+            //不是字符 下一个
+//            s[index] ^= (1<<5);
+            if (Character.isUpperCase(s[index])) {
+                //是大写转为小写
+                s[index] = Character.toLowerCase(s[index]);
+            } else {
+                s[index] = Character.toUpperCase(s[index]);
+            }
+            dfs(index + 1, s, resultList);
+        }
+
+
+    }
 
     /**
      * @param arr
@@ -1054,5 +1101,11 @@ public class Main {
                 System.out.println("");
             }
         }
+    }
+
+    public static boolean isChar(char ch) {
+        if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
+            return true;
+        } else return false;
     }
 }
