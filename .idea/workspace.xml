@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f17828e-159f-4255-b4a9-32f70f5b96a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$Queen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$Queen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$SubSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$SubSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$UniquePath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$UniquePath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/notrace/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/notrace/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585882303905</updated>
-      <workItem from="1585882306837" duration="3407000" />
+      <workItem from="1585882306837" duration="3761000" />
     </task>
     <task id="LOCAL-00001" summary="非递减数列">
       <created>1585884584287</created>
@@ -79,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585884584287</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="种花问题">
+      <created>1585899745786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585899745786</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,13 +90,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="非递减数列" />
-    <option name="LAST_COMMIT_MESSAGE" value="非递减数列" />
+    <MESSAGE value="种花问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="种花问题" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="760" y="135" key="CommitChangelistDialog2" timestamp="1585899703320">
+    <state x="760" y="135" key="CommitChangelistDialog2" timestamp="1585899745638">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="760" y="135" key="CommitChangelistDialog2/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1585899703320" />
+    <state x="760" y="135" key="CommitChangelistDialog2/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1585899745638" />
     <state width="1358" height="271" key="GridCell.Tab.0.bottom" timestamp="1585896336878">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

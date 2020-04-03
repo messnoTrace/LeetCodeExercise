@@ -1159,4 +1159,15 @@ public class Main {
         }
         return count >= n;
     }
+
+    /**
+     *  最后一个单词的长度
+     * @param s
+     * @return
+     */
+    public static int lengthOfLastWord(String s) {
+        s = s.trim();
+        int start = s.lastIndexOf(" ") + 1;
+        return s.substring(start).length();
+    }
 }
