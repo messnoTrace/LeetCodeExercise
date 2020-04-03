@@ -46,6 +46,7 @@ public class Main {
 //        System.out.println("---" + uniqueOccurrences(new int[]{-3, 0, 1, -3, 1, 1, 1, -3, 10, 0}));
 //        System.out.println("===" + letterCasePermutation("a1b2").toString());
         System.out.println("===" + canPlaceFlowers(new int[]{1, 0, 0, 0, 0}, 2));
+        coinChange(new int[]{1,2,5},11);
     }
 
     /**
@@ -1151,7 +1152,7 @@ public class Main {
         int count = 0;
         for (int i = 0; i < flowerbed.length; i++) {
             if (flowerbed[i] == 1) i += 1;
-            else if (flowerbed[i] == 0 && (i == 0 || flowerbed[i - 1] == 0)&&(i==flowerbed.length-1)||flowerbed[i+1]==0) {
+            else if (flowerbed[i] == 0 && (i == 0 || flowerbed[i - 1] == 0) && (i == flowerbed.length - 1) || flowerbed[i + 1] == 0) {
                 flowerbed[i] = 1;
                 count += 1;
                 i += 1;
@@ -1161,7 +1162,8 @@ public class Main {
     }
 
     /**
-     *  最后一个单词的长度
+     * 最后一个单词的长度
+     *
      * @param s
      * @return
      */
@@ -1169,5 +1171,27 @@ public class Main {
         s = s.trim();
         int start = s.lastIndexOf(" ") + 1;
         return s.substring(start).length();
+    }
+
+    /**
+     * 换零钱
+     * https://leetcode-cn.com/problems/coin-change/
+     *
+     * @param coins
+     * @param amount
+     * @return
+     */
+    public static int coinChange(int[] coins, int amount) {
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp,amount+1);
+        dp[0] = 0;
+        for (int i = 0; i <= amount; i++) {
+            for (int coin : coins) {
+                if (i - coin < 0) continue;
+                dp[i] = Math.min(dp[i], 1 + dp[i - coin]);
+            }
+        }
+        return (dp[amount] >amount) ? -1 : dp[amount];
+
     }
 }
