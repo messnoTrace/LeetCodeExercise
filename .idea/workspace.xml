@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f17828e-159f-4255-b4a9-32f70f5b96a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCodeExercise.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCodeExercise.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$Queen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$Queen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$SubSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$SubSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$UniquePath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main$UniquePath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeExercise/com/notrace/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/notrace/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/notrace/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +27,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.notrace.Main" />
+      <module name="LeetCodeExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.notrace.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -51,18 +70,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585882303905</updated>
-      <workItem from="1585882306837" duration="1130000" />
+      <workItem from="1585882306837" duration="3407000" />
     </task>
+    <task id="LOCAL-00001" summary="非递减数列">
+      <created>1585884584287</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585884584287</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="非递减数列" />
+    <option name="LAST_COMMIT_MESSAGE" value="非递减数列" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="760" y="135" key="CommitChangelistDialog2" timestamp="1585884561500">
+    <state x="760" y="135" key="CommitChangelistDialog2" timestamp="1585899703320">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="760" y="135" key="CommitChangelistDialog2/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1585884561500" />
+    <state x="760" y="135" key="CommitChangelistDialog2/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1585899703320" />
+    <state width="1358" height="271" key="GridCell.Tab.0.bottom" timestamp="1585896336878">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1358" height="271" key="GridCell.Tab.0.bottom/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1585896336878" />
+    <state width="1358" height="271" key="GridCell.Tab.0.center" timestamp="1585896336877">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1358" height="271" key="GridCell.Tab.0.center/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1585896336877" />
+    <state width="1358" height="271" key="GridCell.Tab.0.left" timestamp="1585896336876">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1358" height="271" key="GridCell.Tab.0.left/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1585896336876" />
+    <state width="1358" height="271" key="GridCell.Tab.0.right" timestamp="1585896336877">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1358" height="271" key="GridCell.Tab.0.right/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1585896336877" />
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog" timestamp="1585882309242">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

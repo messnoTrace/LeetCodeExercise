@@ -44,7 +44,8 @@ public class Main {
 //        nextGreaterElement(new int[]{2, 4}, new int[]{1, 2, 3, 4});
 
 //        System.out.println("---" + uniqueOccurrences(new int[]{-3, 0, 1, -3, 1, 1, 1, -3, 10, 0}));
-        System.out.println("===" + letterCasePermutation("a1b2").toString());
+//        System.out.println("===" + letterCasePermutation("a1b2").toString());
+        System.out.println("===" + canPlaceFlowers(new int[]{1, 0, 0, 0, 0}, 2));
     }
 
     /**
@@ -1112,7 +1113,8 @@ public class Main {
 
     /**
      * https://leetcode-cn.com/problems/non-decreasing-array/
-     *非递减数列
+     * 非递减数列
+     *
      * @param nums
      * @return
      */
@@ -1134,6 +1136,27 @@ public class Main {
                 nums[i - 1] = nums[i];
             }
         }
-        return change<=1;
+        return change <= 1;
+    }
+
+    /**
+     * 605. 种花问题
+     *
+     * @param flowerbed
+     * @param n
+     * @return
+     */
+    public static boolean canPlaceFlowers(int[] flowerbed, int n) {
+
+        int count = 0;
+        for (int i = 0; i < flowerbed.length; i++) {
+            if (flowerbed[i] == 1) i += 1;
+            else if (flowerbed[i] == 0 && (i == 0 || flowerbed[i - 1] == 0)&&(i==flowerbed.length-1)||flowerbed[i+1]==0) {
+                flowerbed[i] = 1;
+                count += 1;
+                i += 1;
+            }
+        }
+        return count >= n;
     }
 }
