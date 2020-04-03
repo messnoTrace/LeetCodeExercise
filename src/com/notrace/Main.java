@@ -48,9 +48,9 @@ public class Main {
     }
 
     /**
-     * @see<a href="https://leetcode-cn.com/problems/letter-case-permutation/">大小写字母全排列</a>
      * @param S
      * @return
+     * @see<a href="https://leetcode-cn.com/problems/letter-case-permutation/">大小写字母全排列</a>
      */
     public static List<String> letterCasePermutation(String S) {
         List<String> listResult = new ArrayList<>();
@@ -1107,5 +1107,33 @@ public class Main {
         if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
             return true;
         } else return false;
+    }
+
+
+    /**
+     * https://leetcode-cn.com/problems/non-decreasing-array/
+     *非递减数列
+     * @param nums
+     * @return
+     */
+    public boolean checkPossibility(int[] nums) {
+
+        if (nums == null || nums.length <= 2) {
+            return true;
+        }
+
+        int change = 0;
+        for (int i = 1; i < nums.length && change < 2; i++) {
+            if (nums[i - 1] <= nums[i]) {
+                continue;
+            }
+            change++;
+            if (i - 2 > 0 && nums[i - 2] > nums[i]) {
+                nums[i] = nums[i - 1];
+            } else {
+                nums[i - 1] = nums[i];
+            }
+        }
+        return change<=1;
     }
 }
